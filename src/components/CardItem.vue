@@ -1,17 +1,53 @@
 <template>
-  <ul>
-    <li>id: {{ itempass.id }}</li>
-    <li>login: {{ itempass.login }}</li>
-    <li>password: {{ itempass.password }}</li>
-    <!-- <button @click="remove(itempass)" class="bg-gray-700 p-3 rounded-lg">
+  <div class="w-fit m-auto my-2 bg-gray-700 rounded-lg p-3">
+    <input
+      placeholder="id"
+      type="text"
+      :value="passwords_data.id"
+      class="bg-gray-600 w-10 text-center border-0 p-2 m-2 rounded-lg text-xl"
+    />
+    <input
+      placeholder="site"
+      type="text"
+      :value="passwords_data.site"
+      class="bg-gray-600 border-0 p-2 m-2 rounded-lg text-xl"
+    />
+    <input
+      placeholder="login"
+      type="text"
+      :value="passwords_data.login"
+      class="bg-gray-600 border-0 p-2 m-2 rounded-lg text-xl"
+    />
+    <input
+      placeholder="password"
+      type="text"
+      :value="passwords_data.password"
+      class="bg-gray-600 border-0 p-2 m-2 rounded-lg text-xl"
+    />
+    <button
+      type="button"
+      @click="$emit('remove', passwords_data.id)"
+      class="bg-gray-600 p-2 rounded-lg"
+    >
       remove
-    </button> -->
-  </ul>
+    </button>
+  </div>
 </template>
 
 <script>
+import { ref } from "vue";
+
 export default {
-  setup(itempass) {
+  props: {
+    passwords_data: {
+      id: Number,
+      site: String,
+      login: String,
+      password: String,
+    },
+  },
+
+  setup() {
     return {};
   },
 };
