@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+     background: url("https://64.media.tumblr.com/414c61847d40e968256429f16e4a4fb4/25928642b3da72d3-96/s500x750/70f3bd6ba195738bbf3ab9f513adaef07ee5a097.gifv");
+     background-size: 10rem 10rem;
+
+}
+
 body {
     overflow: hidden;
 }
